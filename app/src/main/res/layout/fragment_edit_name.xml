@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/edit_name"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_gravity="center" android:orientation="vertical"  >
+
+    <!--<TextView-->
+        <!--android:id="@+id/lbl_your_name" android:text="Your name"-->
+        <!--android:layout_width="wrap_content" android:layout_height="wrap_content" />-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/txt_your_name"-->
+        <!--android:layout_width="match_parent"  android:layout_height="wrap_content"-->
+        <!--android:inputType="text"-->
+        <!--android:imeOptions="actionDone"-->
+        <!--android:text="Name" />-->
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/button2"
+        android:onClick="showDatePickerDialog"
+        android:layout_gravity="left|center_horizontal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fashion &amp; Style"
+        android:id="@+id/cbFashion"
+        android:checked="false"
+        android:layout_gravity="left|center_horizontal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arts"
+        android:id="@+id/cbArts"
+        android:checked="false"
+        android:layout_gravity="left|center_horizontal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sports"
+        android:id="@+id/cbSports"
+        android:checked="false" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_gravity="left|center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Done"
+        android:onClick="dismiss"
+        android:id="@+id/button"
+        android:layout_gravity="left|center_horizontal" />
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/edit_name"-->
+    <!--android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center" android:orientation="vertical"  >-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/lbl_your_name" android:text="Filter by:"-->
+        <!--android:layout_width="wrap_content" android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Date"-->
+        <!--android:onClick="showDatePickerDialog"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Done"-->
+        <!--android:onClick="dismiss"-->
+        <!--android:id="@+id/button2" />-->
+
+    <!--<Spinner-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/spinner" />-->
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Fashion"-->
+        <!--android:id="@+id/checkBox"-->
+        <!--android:checked="false" />-->
+
+
+<!--</LinearLayout>-->
