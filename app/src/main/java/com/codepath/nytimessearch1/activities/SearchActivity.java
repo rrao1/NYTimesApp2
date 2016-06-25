@@ -44,10 +44,6 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
     String dateString1;
     @BindView(R.id.rvArticles) RecyclerView rvArticles;
     @BindView(R.id.custom_font) TextView txt;
-    //TextView txt = (TextView) findViewById(R.id.custom_font);
-    //RecyclerView rvArticles;
-    //rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-    //ArticleArrayAdapter adapter;
     String searchQuery;
     String beginMonth;
     String beginDay;
@@ -110,19 +106,6 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
         txt.setTypeface(font);
         topStories();
 
-//        RecyclerView rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-//
-//        // Initialize contacts
-//        articles = new ArrayList<>();
-//        // Create adapter passing in the sample user data
-//        ArticleAdapterRV adapter = new ArticleAdapterRV(this, articles);
-//        //ContactsAdapter adapter = new ContactsAdapter(contacts);
-//        // Attach the adapter to the recyclerview to populate items
-//        rvArticles.setAdapter(adapter);
-//        // Set layout manager to position the items
-//        rvArticles.setLayoutManager(new LinearLayoutManager(this));
-        // That's all!
-
     }
 
     @Override
@@ -140,37 +123,8 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
                 //resetFilters();
                 //recycler.clearOnScrollListeners();
                 searchQuery = query;
-
-//                //RecyclerView rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-//                rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-//
-//                // Initialize contacts
-//                articles = new ArrayList<>();
-//                // Create adapter passing in the sample user data
-//                adapter = new ArticleAdapterRV(getApplicationContext(), articles);
-//                //ContactsAdapter adapter = new ContactsAdapter(contacts);
-//                // Attach the adapter to the recyclerview to populate items
-//                rvArticles.setAdapter(adapter);
-//                // Set layout manager to position the items
-//                StaggeredGridLayoutManager gridLayoutManager =
-//                        new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-//                rvArticles.setLayoutManager(gridLayoutManager);
-////                articles = new ArrayList<>();
-////                adapter = new ArticleArrayAdapter(getApplicationContext(), articles);
-////                gvResults.setAdapter(adapter);
-
                 sameMethod(0);
 
-//                if (dateString != null) {
-//                    params.put("begin_date", dateString);
-//                }
-//
-//                Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
-//                String text = "";
-//                if (mySpinner != null && mySpinner.getSelectedItem() != null) {
-//                    text = mySpinner.getSelectedItem().toString();
-//                }
-//                if (text != "") { recency = text; }
 
 
                 searchView.clearFocus();
@@ -206,21 +160,6 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
 
 
     public void setupViews() {
-//        gvResults = (GridView) findViewById(R.id.gvResults);
-//        //btnSearch = (Button) findViewById(R.id.btnSearch);
-//        articles = new ArrayList<>();
-//        adapter = new ArticleArrayAdapter(this, articles);
-//        gvResults.setAdapter(adapter);
-        //RecyclerView rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-        //rvArticles = (RecyclerView) findViewById(R.id.rvArticles);
-
-
-        // Initialize contacts
-        //articles = new ArrayList<>();
-        // Create adapter passing in the sample user data
-        //adapter = new ArticleAdapterRV(this, articles);
-        //ContactsAdapter adapter = new ContactsAdapter(contacts);
-        // Attach the adapter to the recyclerview to populate items
         rvArticles.setAdapter(adapter);
         // Set layout manager to position the items
         StaggeredGridLayoutManager gridLayoutManager =
@@ -239,133 +178,14 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
             }
         });
 
-        //hook up listener for grid click
-//        ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
-//            @Override
-//            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-//                // do it
-//            }
-//        });
-
-
-
-//        gvResults.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                //create an intent to display article
-//                Intent i = new Intent(getApplicationContext(), ArticleActivity.class);
-//                //get the article to display
-//                Article article = articles.get(position);
-//                //i.putExtra("url", article.getWebUrl());
-//
-//                //pass in article into intent
-//                i.putExtra("article", article);
-//                //launch activity
-//                startActivity(i);
-//            }
-//        });
-//
-//        gvResults.setOnScrollListener(new EndlessScrollListener() {
-//            @Override
-//            public boolean onLoadMore(int page, int totalItemsCount) {
-//                // Triggered only when new data needs to be appended to the list
-//                // Add whatever code is needed to append new items to your AdapterView
-//                customLoadMoreDataFromApi(page);
-//
-//                // or customLoadMoreDataFromApi(totalItemsCount);
-//                return true; // ONLY if more data is actually being loaded; false otherwise.
-//            }
-//        });
     }
 
     public void customLoadMoreDataFromApi(int offset) {
         sameMethod(offset);
     }
 
-//    // attach to an onclick handler to show the date picker
-//    public void showDatePickerDialog(View v) {
-//        DatePickerFragment newFragment = new DatePickerFragment();
-//        newFragment.show(getSupportFragmentManager(), "datePicker");
-//    }
-
-    // handle the date selected
-//    @Override
-//    public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-//        // store the values selected into a Calendar instance
-//        final Calendar c = Calendar.getInstance();
-//        c.set(Calendar.YEAR, year);
-//        c.set(Calendar.MONTH, monthOfYear);
-//        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-//        Log.d("DEBUG", "" + year);
-//        if (dayOfMonth <= 10) {
-//            beginDay = "0" + (1 + dayOfMonth);
-//        }
-//        else {
-//            beginDay = "" + dayOfMonth;
-//        }
-//        if (monthOfYear <= 10) {
-//            beginMonth = "0" + (1 + monthOfYear);
-//        }
-//        else {
-//            beginMonth = "" + monthOfYear;
-//        }
-//        dateString = year + beginMonth + beginDay;
-//        Log.d("YEAR", dateString);
-//
-//        //searchQuery = query;
-//        // perform query here
-//
-//        articles = new ArrayList<>();
-//        adapter = new ArticleArrayAdapter(getApplicationContext(), articles);
-//        gvResults.setAdapter(adapter);
-//        //String query = etQuery.getText().toString();
-//
-//        AsyncHttpClient client = new AsyncHttpClient();
-//        String url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-//        RequestParams params = new RequestParams();
-//        params.put("api-key", "9c6c0376437f4ed4a175eb6fcafce1e6");
-//        params.put("page", 0);
-//        params.put("q", searchQuery);
-//        //dateString = year + monthOfYear + dayOfMonth + "";
-//        params.put("begin_date", "" + dateString);
-//        Log.d("DEBUG", dateString + searchQuery);
-//        //params.put("page", 0);
-//        //params.put("q", query);
-//        client.get(url, params, new JsonHttpResponseHandler() {
-//            @Override
-//            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-//                //Log.d("DEBUG", response.toString());
-//                JSONArray articleJsonResults = null;
-//                try {
-//                    articleJsonResults = response.getJSONObject("response").getJSONArray("docs");
-//                    adapter.clear();
-//                    adapter.addAll(Article.fromJSONArray(articleJsonResults));
-//
-//                    //Log.d("DEBUG", articles.toString());
-//                } catch(JSONException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-//    }
-
-//    public void showEditDialog(View view) {
-//        FragmentManager fm = getSupportFragmentManager();
-//        editNameDialogFragment = EditNameDialogFragment.newInstance("Some Title");
-//        editNameDialogFragment.show(fm, "fragment_edit_name");
-//    }
-//
-//    public void dismiss(View view) {
-//        editNameDialogFragment.dismiss();
-//    }
 
 
-    public void launchComposeView(View view) {
-        // first parameter is the context, second is the class of the activity to launch
-        Intent i = new Intent(SearchActivity.this, FilterActivity.class);
-        startActivityForResult(i, REQUEST_CODE);
-        //startActivity(i); // brings up the second activity
-    }
 
     public void sameMethod(int offset) {
         AsyncHttpClient client = new AsyncHttpClient();
@@ -396,16 +216,6 @@ public class SearchActivity extends AppCompatActivity implements EditNameDialogF
         if (arts) {
             params.put("fq", "news_desk:(\"Arts\")");
         }
-        //if (((CheckBox) findViewById(R.id.checkBox)).isChecked())lfdekhrldkefguikibdeghhlgvenbjck {
-          //  params.put("fq", "news_desk:(\"Fashion & Style\")");
-        //}
-
-//        Spinner mySpinner = (Spinner) findViewById(R.id.spinner);
-//        String text = "";
-//        if (mySpinner != null && mySpinner.getSelectedItem() != null) {
-//            text = mySpinner.getSelectedItem().toString();
-//        }
-//        //if (text != "") { Log.d("debug", text); }
 
         client.get(url, params, new JsonHttpResponseHandler() {
             @Override
