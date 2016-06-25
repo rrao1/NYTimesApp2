@@ -42,12 +42,15 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/6nVRWwp.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+<img src='http://i.imgur.com/Dz1I86L.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-I tried to do use gson for parsing the JSON and was able to for articles I searched for but ran into errors with Parcel when I used it for showing my top stories.
+
+I had trouble using gson to parse the JSON. I was able to use it for articles I searched, but then had errors in my Article class with Parcel when displaying top stories.
 
 ## Open-source libraries used
 
